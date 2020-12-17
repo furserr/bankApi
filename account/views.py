@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from rest_framework import viewsets
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from rest_framework.exceptions import ValidationError
 
 from .models import Customer, Account, Transfer
 from .serializers import CustomerSerializer, AccountSerializer, TransferSerializer
@@ -24,12 +25,8 @@ def TransferHistory(request, id):
         account = get_object_or_404(Account, id=id)
         transfers = Transfer.objects.all()
         history = transfers.filter(sender=account) | transfers.filter(receiver=account)
-        serializer = TransferSerializer(history, many=True,context={'request':request})
-        return Response(serializer.data)
-
-
-@api_view(['GET'])
-def balance(request, id):
-    account = get_object_or_404(Account, id=id)
-    balance = account.amount
-    return Response({"amount": balance})
+        if history:
+            serializer = TransferSerializer(history, many=True,context={'request':request})
+            return Response(serializer.data)
+        else:
+            raise ValidationError({'Not Found': "This account has no transfer history"}, code=400)

@@ -12,8 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 
-import django_heroku
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'kzx^aqsnf!zmz816yygzlq8$=wy!!l05q^wouc^$6a82z##_yc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'bankapidemo.herokuapp.com']
 
@@ -123,5 +121,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
+CORS_ORIGIN_WHITELIST = (
+    '0.0.0.0:8000',
+    'localhost:8000',
+    '127.0.0.1:8000',
+)
