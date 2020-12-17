@@ -16,6 +16,8 @@
 * [Delete Transfer](https://github.com/furserr/bankApi#delete-transfer)
 * [Show Transfer History](https://github.com/furserr/bankApi#show-transfer-history)
 
+---
+
 ### Show Customers List
 
   Returns json data about customers.
