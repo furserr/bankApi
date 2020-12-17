@@ -29,7 +29,7 @@ class BankTests(APITestCase):
 
         data = {
             "customer": 1,
-            "amount": 10
+            "balance": 10
         }
         url = 'http://127.0.0.1:8000/accounts/'
         response = self.client.post(url, data, format='json')
@@ -37,13 +37,13 @@ class BankTests(APITestCase):
 
     def create_transfer(self):
         self.test_customer = Customer.objects.create(name='testCustomer')
-        self.account1 = Account.objects.create(customer=1, amount=10)
-        self.account2 = Account.objects.create(customer=1, amount=20)
+        self.account1 = Account.objects.create(customer=1, balance=10)
+        self.account2 = Account.objects.create(customer=1, balance=20)
 
         data = {
             "sender": 1,
             "receiver": 2,
-            "amount": 5
+            "balance": 5
         }
         url = 'http://127.0.0.1:8000/transfers/'
         response = self.client.post(url, data, format='json')
