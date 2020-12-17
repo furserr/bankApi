@@ -79,7 +79,7 @@
 
    **Required:**
  
-   name=[string]
+   None
 
 * **Data Params**
 
@@ -277,9 +277,7 @@
 *  **URL Params**
 
    **Required:**
- 
-   balance=[float]
-   customer=[integer]
+   None
 
 * **Data Params**
 
@@ -478,9 +476,7 @@
 
    **Required:**
  
-   sender=[int]
-   receiver=[int]
-   balance=[float]
+   None
 
 * **Data Params**
 
