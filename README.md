@@ -1,6 +1,20 @@
 # Bank Api
 ---
----
+* [Show Customers List](https://github.com/furserr/bankApi#show-customers-list)
+* [Create Customer](https://github.com/furserr/bankApi#create-customer)
+* [Show Customer](https://github.com/furserr/bankApi#show-customer)
+* [Update Customer](https://github.com/furserr/bankApi#update-customer)
+* [Delete Customer](https://github.com/furserr/bankApi#delete-customer)
+* [Show Accounts List](https://github.com/furserr/bankApi#show-accounts-list)
+* [Create Account](https://github.com/furserr/bankApi#create-account)
+* [Show Account](https://github.com/furserr/bankApi#show-account)
+* [Update Account](https://github.com/furserr/bankApi#update-account)
+* [Delete Account](https://github.com/furserr/bankApi#delete-account)
+* [Show Transfers List](https://github.com/furserr/bankApi#show-transfers-list)
+* [Create Transfer](https://github.com/furserr/bankApi#create-transfer)
+* [Show Transfer](https://github.com/furserr/bankApi#show-transfer)
+* [Delete Transfer](https://github.com/furserr/bankApi#delete-transfer)
+* [Show Transfer History](https://github.com/furserr/bankApi#show-transfer-history)
 
 ### Show Customers List
 
